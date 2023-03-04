@@ -25,6 +25,7 @@ function prenderLuz() {
         moverBoton()
         encender()
         
+        
     }else {
         luz="off"
         imagenEddy.style.opacity=0
@@ -33,15 +34,18 @@ function prenderLuz() {
         colorBoton()
         moverBoton()
         encender()
+        
     }
 }
 
 function colorBoton(){
     if(luz==="on"){
         prender.style.backgroundColor="red"
+        
     }
     else {
         prender.style.backgroundcolor="brown"
+       
     }
 }
 
@@ -49,18 +53,19 @@ function moverBoton(){
     if(luz==="on"){
         prender.style.position=("relative")
     }else{
+        
         prender.style.position=("absolute")
     }
 }
 
 function encender(){
-    if(luz==="on"){
+    if(sonido.paused){
         sonidoBoton.play()
         sonido.play()
 
     }else{
         sonidoBoton.play()
-        sonido.paused()
+        sonido.pause()
         sonido.currentTime=0
     }
 }
