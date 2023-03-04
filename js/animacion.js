@@ -44,6 +44,7 @@ function colorBoton(){
         
     }
     else {
+        luz="off"
         prender.style.backgroundcolor="brown"
        
     }
