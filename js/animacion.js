@@ -56,6 +56,7 @@ function moverBoton(){
     }else{
         
         prender.style.position=("absolute")
+        
     }
 }
 
