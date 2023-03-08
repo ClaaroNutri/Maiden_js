@@ -1,5 +1,5 @@
 
-let luz="off";
+let luz="on";
 
 let imagenEddy=document.querySelector("#imagen");
 console.log(imagenEddy);
@@ -16,9 +16,9 @@ let sonidoBoton=document.querySelector("#botonOn")
 prender.addEventListener("click", ()=> {prenderLuz()})
 
 function prenderLuz() {
-    if (luz=="off"){
-        luz="on"
-        prender.innerHTML="On"
+    if (luz=="on"){
+        luz="off"
+        prender.innerHTML="Off"
         imagenEddy.style.opacity=1
         back.style.backgroundColor="white"
         colorBoton()
@@ -29,7 +29,7 @@ function prenderLuz() {
     }else {
         luz="off"
         imagenEddy.style.opacity=0
-        prender.innerHTML="Off"
+        prender.innerHTML="On"
         back.style.backgroundColor="black"
         colorBoton()
         moverBoton()
@@ -39,19 +39,19 @@ function prenderLuz() {
 }
 
 function colorBoton(){
-    if(luz==="on"){
+    if(luz==="off"){
         prender.style.backgroundColor="red"
         
     }
     else {
-        luz="off"
+        luz="on"
         prender.style.backgroundcolor="brown"
        
     }
 }
 
 function moverBoton(){
-    if(luz==="on"){
+    if(luz==="off"){
         prender.style.position=("relative")
     }else{
         
